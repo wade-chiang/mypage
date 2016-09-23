@@ -1,0 +1,137 @@
+/*
+* {
+  border-width: : 0;
+  border-color: lightblue;
+  border-style: dashed;
+}
+*/
+
+html , body {
+    /*將body設為全版，背景圖才不會受限於elements的高度，超重要！*/
+    width: 100%;
+    height: 100%;
+}
+/*
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif, "Microsoft YaHei";
+}
+/*
+
+
+
+/*------------------------------Navbar Setting Start------------------------------*/
+/*@media screen and (min-width:768px)*/
+.nav-main{
+  background-color: #000000;
+  background-color:rgba(0, 0, 0, 0.6);;
+}
+
+
+.navbar .nav.pull-center {
+  float: none;
+  margin: 0 auto;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+/*-----↑for navbar置中↓-----*/
+.navbar-inner {
+  text-align:center;
+}
+
+/* 設定navbar link的字型顏色 */
+.navbar .nav > li > a {
+  font-size: 200%;
+  margin-right: 70px;
+  color: lightgreen;
+}
+
+/* 設定nvabar link字型顏色（當滑鼠移動到時） */
+.navbar .nav > li > a:hover {
+  color: lightblue;
+}
+
+/* 設定nvabar link字型顏色（當click點選後） */
+.navbar .nav > li > a:focus {
+  color: red;
+}
+
+/*------------------------------Navbar Setting End------------------------------*/
+
+/*-----------------------------header Setting Start------------------------------*/
+
+ header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../image/background-city.jpg) no-repeat center center scroll;
+    background-size: cover;
+    margin-top: auto;
+}
+
+.text-vertical-center {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+    color: white
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*-----------------------------header Setting End------------------------------*/
+
+#about{
+  height: auto;  /* 最外層設定height:auto，讓網頁縮小時內容不會蓋到下面的container */
+  width: 100%;
+  background-color: #181818;
+}
+
+.row-about{
+  width: 77%;
+  height: 600px; /* 設定一般檢視時的框架背景高度 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-avatar{
+  margin-top: 8%;
+  /*margin-left: -10%;*/
+  /*margin-right: auto;*/
+  border-width: thin;
+  border-style: solid;
+  border-color: green;
+}
+
+.avatar{
+  display: block; /* 將圖片設成block屬性，margin的置中才有用 */
+  margin-left: auto;
+  margin-right: auto;
+  border-width: thin;
+  border-style: solid;
+  border-color: red;
+}
+
+.col-about{
+  margin-top: 6.5%;
+  border-width: thin;
+  border-style: solid;
+  border-color: blue;
+  margin-left: auto;
+  display: block;
+  float: left;
+}
+
+.col-about p{
+  color: #c4d6c9;
+  font-size: 150%;
+
+}
+
+/*-----------*/

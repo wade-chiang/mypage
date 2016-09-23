@@ -1,0 +1,535 @@
+
+html , body {
+    /*將body設為全版，背景圖才不會受限於elements的高度，超重要！*/
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif, "Microsoft YaHei";*/
+    /*font-size: 14px;*/
+}
+
+
+/*------------------------------------------------   Navbar Setting Start   ------------------------------------------------*/
+
+
+/* screen width<=796px時，navbar就會縮成toggle（視navbar長度所做的調整） */
+/* bootstrap預設為<=768px才會使用toggle */
+@media (max-width: 796px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .collapsing {
+    overflow: hidden!important;
+  }
+}
+
+
+/* navbar的邊框顏色 */
+.navbar-default {
+    border-color: #383838;
+}
+
+/*修改toggle邊框的預設顏色*/
+.navbar-default .navbar-toggle {
+     border-color: rgba(255, 255, 255, 0); /* 全透明 */
+}
+
+/*修改裡面橫線的顏色*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #d0d0d0;
+}
+
+/* 游標移到toggle時的background color */
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: rgba(66, 93, 153, 1);
+}
+
+
+ /* 螢幕寬度>768px時，使用透明navbar */
+@media screen and (min-width:768px) {
+  .nav-main{
+    background-color: #000000;
+    background-color:rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* 螢幕寬度<767px時，使用黑色navbar */
+@media screen and (max-width:767px) {
+  .nav-main{
+    background-color: #000000;
+  }
+}
+
+.navbar .nav.pull-center {
+  float: none;
+  margin: 0 auto;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+
+/*-----↑for navbar置中↓-----*/
+.navbar-inner {
+  text-align:center;
+}
+
+/* 設定navbar link的字型顏色 */
+.navbar .nav > li > a {
+  font-size: 1.8em;
+  font-family: "Chivo";
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: auto;
+  color: rgb(213, 236, 245);
+}
+
+/* 設定nvabar link字型顏色（當滑鼠移動到時） */
+.navbar .nav > li > a:hover {
+  color: rgb(79, 193, 240);
+}
+
+/* 設定nvabar link字型顏色（當click點選後） */
+.navbar .nav > li > a:focus {
+  color: rgb(247, 90, 185);
+}
+
+/* 設定navbar在離開page top時會變色（使用js） */
+.navbar-default.affix {
+    border-color: rgba(34,34,34,.05);
+    /*background-color: #fff;*/
+    background-color:rgba(0, 0, 0, 0.7)
+}
+
+
+/*------------------------------------------------   header Setting Start   ------------------------------------------------*/
+
+ header {
+    display: table; /* 偽table元素，置中用 */
+    position: relative; /* 無作用？ */
+    height: 100%;  /* 設100%讓背景自動縮放 */
+    width: 100%;
+    background: url(../image/background-city.jpg) no-repeat center center scroll;
+    background-size: cover;
+}
+
+.headerFrame{
+  display: table-cell;          /* table後接一個table-cell元素，讓整個frame在table裡垂直置中 */
+  vertical-align: middle;     /* 讓frame裡面的文字垂直置中 */
+}
+
+.headerContent{
+  display: block;
+  width: 60%;                   /* 限制整個content的總寬度 */
+  margin-left: auto;            /* 讓block水平置中 */
+  margin-right: auto;
+  padding-top: 50px;         /* 用padding-top & bottom來做與navbar跟下一個container的間隙比margin更好 */
+  padding-bottom: 50px;   /* 因為margin會讓元素直接位移，但padding不會！ */
+  text-align: center;
+  color: white;
+}
+
+header a{
+  display:inline-block; block;
+  margin-top: 100px;
+  color: rgba(201, 224, 224, 0.48);
+}
+
+header p{
+  font-family: inherit;
+}
+
+/* 螢幕寬度 >= 1px時，about-frame會留兩旁的黑邊 */
+@media screen and (min-width:561px) {
+  header p{
+    font-size: 2em;
+  }
+  header h2{
+    font-size: 4em;
+  }
+  header h1{
+    font-size: 5em;
+  }
+ }
+
+
+/*------------------------------------------------   about Setting Start   ------------------------------------------------*/
+
+
+/* 設定一般檢視時的框架背景高度 */
+
+@media screen and (min-width:1050px) {
+  #about {
+    min-height: 630px;
+  }
+}
+
+/* 最外層設定height:auto，讓網頁縮小時內容不會蓋到下面的container ()可能無用)*/
+
+#about {
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  /*---tag---*/
+}
+
+#about p{
+  font-family: inherit;
+}
+
+.col-avatar-info {
+  padding-top: 7%;
+  padding-bottom: 10px;
+  /*---tag---*/
+  /*border-width: thin;
+  border-style: solid;
+  border-color: blue;*/
+}
+
+.col-avatar {
+  display: block;
+  /* block底下的padding才有用 */
+  padding-top: 7%;
+  min-width: 150px;
+  /*---tag---*/
+  /*border-width: thin;
+  border-style: solid;
+  border-color: red;*/
+}
+
+.col-avatar > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+@media screen and (max-width:381px) {
+  /* 在screen <=380px時隱藏.info */
+  .col-hiden {
+    display: none;
+  }
+  /* 讓avatar在窄寬度時用100%的width來置中 */
+  .col-avatar {
+    width: 100%;
+  }
+  /* 小螢幕時，about的內容文字會變小 */
+  #about p{
+    font-size: 16px;
+  }
+}
+
+.col-info {
+  display: block;
+  padding-top: 5%;
+}
+
+.col-info > div {
+  /* 用margin auto置中，需要設width，大於文字長度即可，**width的長度可決定置中時的位置 */
+  max-width: 235px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-info h2 {
+  color: #000000;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.col-info p {
+  color: #3c3c3c;
+  font-size: 1.3em;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+}
+
+.col-about {
+  margin-top: 6%;
+  /*---tag---*/
+  /*border-width: thin;
+  border-style: solid;
+  border-color: green;*/
+}
+
+.col-about h1 {
+  color: ##000000;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 4em;
+}
+
+.col-about p {
+  width: auto;
+  height: auto;
+  padding-top: 1em;
+  color: #3c3c3c;
+  font-size: 1.5em;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+}
+
+/* 設定隱藏的row靠左  */
+.row-hiden {
+  float: left;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width:382px) {
+  /* 當螢幕寬度>=382px時，這個info會隱藏  */
+  .row-hiden {
+    display: none;
+  }
+  /* 在螢幕>=382px時，讓.col-about底下留白，不至於太靠近timeilne */
+  .col-about {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width:331px) {
+  .col-about h1{
+    font-size: 3em;
+  }
+}
+
+
+/*------------------------------------------------   ExpTitle Setting Start   ------------------------------------------------*/
+
+
+#ExpTitle{
+  background: url(../image/timelineHeader.jpg) no-repeat center center scroll;
+  background-size: cover;
+  display: table;
+  max-height: 100%;
+  width: 100%;
+}
+
+/* 螢幕寬度 <= 1050px時，ExpTitle的高度會是480px */
+/* 螢幕寬度 <= 1050px時，ExpTitle的字體大小為6em */
+@media screen and (min-width:1050px) {
+  #ExpTitle div{
+    height: 480px;
+  }
+  #ExpTitle p{
+    color:#ffffff;
+    font-size: 6em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+/* 螢幕寬度 <= 1049px時，#resumeHeader的高度會是360px */
+/* 螢幕寬度 <= 1049px時，resumeTitle的字體大小為5em */
+@media screen and (max-width:1049px) {
+  #ExpTitle div{
+    height: 360px;
+  }
+  #ExpTitle p{
+    color:#ffffff;
+    font-size: 5em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+/* 螢幕寬度 <= 480px時，#ExpTitle的高度會是240px */
+/* 螢幕寬度 <= 480px時，ExpTitle的字體大小為3em（太大的話會超出邊界） */
+@media screen and (max-width:480px) {
+  #ExpTitle div{
+    height: 240px;
+  }
+  #ExpTitle p{
+    color:#ffffff;
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+#ExpTitle div{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#ExpTitle p{
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+
+/*------------------------------------------------   Timeline Setting Start   ------------------------------------------------*/
+
+/* See the timeline.css */
+
+/*------------------------------------------------   Skill Setting Start   ------------------------------------------------*/
+
+
+/***** 目前無意義 *****/
+#skill{
+}
+
+#skill li{
+  text-align: center;
+}
+
+#skill ul{
+  list-style: none; /* 去掉ul前的小點 */
+  margin: 0; /* 目前無用 */
+  padding-left: 0; /* 超重要！預設最的左col有padding會無法對齊 */
+}
+
+#skill h2{
+  font-family: Quicksand;
+}
+
+.no_padding{
+  padding: 0;  /* 一樣超重要，沒設的話框線無法對齊 */
+}
+
+.skillBox{
+  padding: 50px 0;  /* 讓box的top拉出空間 */
+}
+
+  /* 設定每個box的右邊都要有框線 */
+.skillBox{
+  border-right-style: solid;
+  border-right-width: thin;
+  border-right-color: rgb(231, 231, 231);
+}
+
+/* 隱藏最右邊(最後一個box的右框線) */
+.skill_ul li:last-child .skillBox{
+  border-right: 0;
+}
+
+
+/*----- skill when zoom out -----*/
+
+@media screen and (max-width:752px) {
+  hr{
+    display: none;
+  }
+  .skillBox{
+    padding: 30px 0;  /* 讓box的top拉出空間 */
+  }
+  #skill h2{
+    font-size: 170%;
+  }
+}
+
+@media screen and (max-width:381px) {
+  #skill h2{
+    font-size:1.5em;
+  }
+  #skill i{
+    font-size:2em;
+  }
+}
+
+
+/*------------------------------------------------   DoH Setting Start   ------------------------------------------------*/
+
+
+#DoH{
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  background-color:rgb(69, 69, 69);
+}
+
+#DoH h1{
+  color: rgba(223, 145, 204, 0.86);
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+#DoH p{
+  color: #ffffff;
+  font-family: inherit;;
+  font-size: 1.5em;
+  padding: 20px 80px 0 80px;
+}
+
+#banner-fade{
+  margin-top: 6em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* screen width <=1440px時，減少內文的左右padding */
+@media screen and (max-width:1440px) {
+  #DoH p{
+    padding: 20px 25px 0 25px
+  }
+}
+
+@media screen and (max-width:381px) {
+  #DoH p{
+    font-size: 16px;
+  }
+}
+
+/*------------------------------------------------   Footer Setting Start   ------------------------------------------------*/
+
+
+footer{
+  background-color: rgb(33, 33, 33);
+  height: 50px;
+}
+
+footer div{
+  color: rgb(110, 133, 168);
+  font-family: "Open Sans";
+  line-height: 50px;
+  text-align: center;
+}
+
+@media screen and (min-width:351px) {
+  footer div{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width:350px) {
+  footer div{
+    font-size: 1.2em;
+  }
+}
