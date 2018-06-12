@@ -104,8 +104,9 @@ body {
 /* 設定navbar link的字型顏色 */
 .navbar .nav > li > a {
   font-size: 1.8em;
-  font-family: "Chivo";
-  font-weight: 400;
+  /* font-family: "Chivo"; */
+  font-family: "Dosis";
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: auto;

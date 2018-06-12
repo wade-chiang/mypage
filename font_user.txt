@@ -6,7 +6,9 @@ skill:Quicksand
 
 Open Sans 300
 
-navbar: Chivo 400
+# navbar: Chivo 400
+
+navbar: Dosis 600
 
 Source Sans Pro 300 400
 
