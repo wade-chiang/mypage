@@ -6,10 +6,12 @@ skill:Quicksand
 
 Open Sans 300
 
-# navbar: Chivo 400
+# navbar: Chivo 400 not in use
 
 navbar: Dosis 600
 
 Source Sans Pro 300 400
+
+DoH h1: New Cycle 700 (Life at DoH Title)
 
 ---------------------------------

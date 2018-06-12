@@ -475,8 +475,9 @@ header p{
 
 #DoH h1{
   color: rgba(223, 145, 204, 0.86);
-  font-family: "Open Sans";
-  font-weight: 500;
+  /* font-family: "Open Sans"; */
+  font-family: "News Cycle";
+  font-weight: 700;
   font-size: 3.5em;
   text-align: center;
 }
@@ -489,7 +490,7 @@ header p{
 }
 
 #banner-fade{
-  margin-top: 6em;
+  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
 }
