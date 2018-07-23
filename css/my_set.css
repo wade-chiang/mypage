@@ -105,7 +105,8 @@ body {
 .navbar .nav > li > a {
   font-size: 1.8em;
   /* font-family: "Chivo"; */
-  font-family: "Dosis";
+  /* font-family: "Dosis"; */
+  font-family: "IBM Plex Serif";
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -156,6 +157,10 @@ body {
   padding-bottom: 50px;   /* 因為margin會讓元素直接位移，但padding不會！ */
   text-align: center;
   color: white;
+}
+
+#myName{
+  font-family: IM Fell French Canon SC;
 }
 
 header a{
@@ -474,9 +479,11 @@ header p{
 }
 
 #DoH h1{
-  color: rgba(223, 145, 204, 0.86);
+  /* color: rgba(223, 145, 204, 0.86); */
+  color: rgba(153, 186, 219, 0.86);
   /* font-family: "Open Sans"; */
-  font-family: "News Cycle";
+  /* font-family: "News Cycle"; */
+  font-family: "Prata";
   font-weight: 700;
   font-size: 3.5em;
   text-align: center;
@@ -506,6 +513,9 @@ header p{
 @media screen and (max-width:381px) {
   #DoH p{
     font-size: 16px;
+  }
+  #DoH h1{
+    font-size: 2.5em;
   }
 }
 
