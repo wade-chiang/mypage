@@ -272,9 +272,11 @@
   color: #6a6a6a
 }
 
+/*
 #myTimeline h2,h4,p{
   font-family: inherit;;
 }
+*/
 
 /*  螢幕<400px時，panels的內容全部縮小 */
 @media screen and (max-width:400px) {
